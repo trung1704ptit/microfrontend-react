@@ -5,14 +5,14 @@ module.exports = {
   mode: "development",
   entry: './src/index.js',
   devServer: {
-    port: 8081,
+    port: 8082,
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'products',
+      name: 'cart',
       filename: 'remoteEntry.js',
       exposes: {
-        './ProductsIndex': './src/bootstrap'
+        './CartShow': './src/bootstrap'
       },
       shared: ['faker']
     }),
